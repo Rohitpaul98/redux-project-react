@@ -10,3 +10,9 @@ export const decNumber = (num) => {
         payLoad: num
     }
 }
+export const addItemTodo = (title) => {
+    return {
+        type: "ADDTODO",
+        payLoad: title
+    }
+}
