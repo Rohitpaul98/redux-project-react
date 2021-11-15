@@ -1,11 +1,35 @@
-const initialState = []
 
-const addTodo = (state = initialState, action) => {
-    if (action.type === 'ADDTODO') {
-        return [...state, action.payLoad]
-    }
-    else {
-        return state
-    }
+import { createSlice } from "@reduxjs/toolkit"
+const initialState = {
+    inputValue: []
 }
-export default addTodo
+
+const todoSlice = createSlice({
+    name: 'Todo',//action
+    initialState,//initial state
+    reducers: {
+        addTodo: (state, action) => {
+            state.inputValue = [...state.inputValue, action.payload]
+        }
+    }
+
+})
+
+export default todoSlice.reducer
+
+export const { addTodo } = todoSlice.actions
+
+
+
+// const addTodo = (state = initialState, action) => {
+//     if (action.type === 'ADDTODO') {
+//         return [...state, action.payLoad]
+//     }
+//     // if(action.type==='REMOVETODO'){
+
+//     // }
+//     else {
+//         return state
+//     }
+// }
+// export default addTodo

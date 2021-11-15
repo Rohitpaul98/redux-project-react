@@ -16,3 +16,9 @@ export const addItemTodo = (title) => {
         payLoad: title
     }
 }
+// export const removeItemTodo = (title) => {
+//     return {
+//         type: "REMOVETODO",
+//         payLoad: title
+//     }
+// }
