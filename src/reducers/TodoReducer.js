@@ -10,6 +10,7 @@ const todoSlice = createSlice({
     reducers: {
         addTodo: (state, action) => {
             state.inputValue = [...state.inputValue, action.payload]
+            state.inputvalue = ['']
         }
     }
 
